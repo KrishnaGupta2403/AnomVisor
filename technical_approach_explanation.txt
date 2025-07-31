@@ -1,0 +1,54 @@
+Complete Explanation of Frontend, Backend, Technical Approach, and Dataflow
+
+1. Backend Architecture and Technical Approach:
+
+- The backend is implemented using Flask, a lightweight Python web framework, with CORS enabled to allow cross-origin requests from the frontend.
+- It exposes several REST API endpoints:
+  - /upload (POST): Accepts two files (hyperspectral image file and ground truth file) along with a dataset name. The files are saved to an uploads folder, and a processing pipeline is run on the uploaded data.
+  - /predict (POST): Accepts JSON input data, runs the pretrained AETransformer model to reconstruct the input and computes reconstruction error as anomaly scores.
+  - /metrics (GET): Computes accuracy and confusion matrix on a test dataset using the model.
+  - /ping and / (GET): Health check endpoints.
+
+- The core model is an Autoencoder Transformer (AETransformer) implemented in PyTorch:
+  - The encoder compresses input data to a latent representation.
+  - A transformer block applies self-attention on the latent space.
+  - The decoder reconstructs the input from the transformed latent vector.
+  - The model is pretrained and loaded from a .pth file.
+
+- Data preprocessing and pipeline:
+  - Hyperspectral data and ground truth are loaded from .mat files.
+  - Noisy bands are removed for specific datasets.
+  - Data is scaled and dimensionality reduced using PCA.
+  - Patches of fixed size are extracted from the data.
+  - A PatchAutoencoder is trained on the patches to learn latent features.
+  - A SimpleTransformer applies attention on latent features to produce scores.
+  - An SVM classifier is trained on the latent features for classification.
+  - The pipeline returns accuracy, classification report, and confusion matrix.
+
+2. Frontend Architecture and Dataflow:
+
+- The frontend is a React application structured with components:
+  - App.js: Main component managing state for backend status, selected dataset, upload results, toast notifications, and dark mode.
+  - DatasetSelector.js: Dropdown to select one of the predefined datasets (Salinas, Indian Pines, Pavia University).
+  - FileUpload.js: Allows users to select and upload HSI and Ground Truth files. It sends the files and selected dataset to the backend /upload endpoint.
+  - ModelResults.js: Displays the results returned from the backend including accuracy, classification report, and confusion matrix.
+  - Toast.js: Displays success or error messages.
+
+- On app load, the frontend checks backend connectivity via /ping.
+- Users select a dataset, upload corresponding files, and submit.
+- The frontend sends files and dataset name to backend /upload endpoint.
+- Upon successful processing, results are displayed in ModelResults.
+- Dark mode toggle is supported and persisted in localStorage.
+
+3. Overall Dataflow:
+
+- User selects dataset and uploads hyperspectral image and ground truth files via frontend.
+- Files are sent to backend /upload endpoint.
+- Backend saves files and runs the processing pipeline:
+  - Loads and preprocesses data.
+  - Extracts patches and trains autoencoder and transformer.
+  - Trains SVM classifier and evaluates performance.
+- Backend returns classification results to frontend.
+- Frontend displays results to the user.
+
+This architecture enables interactive anomaly detection on hyperspectral images with a user-friendly interface and a powerful backend model pipeline.
