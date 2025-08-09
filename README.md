@@ -77,8 +77,12 @@ AnomVisor/
 | **HTML**               | UI structure |
 
 <p align="center">
-  <img src="./assets/languages.png" alt="Language Distribution" width="600"/>
-</p>
+  <img src="https://skillicons.dev/icons?i=python" title="Python - Backend ML processing (Flask/FastAPI)" height="50"/>
+  <img src="https://raw.githubusercontent.com/github/explore/main/topics/jupyter-notebook/jupyter-notebook.png" title="Jupyter Notebook - Model prototyping & experiments" height="50"/>
+  <img src="https://skillicons.dev/icons?i=javascript" title="JavaScript (React) - Interactive UI" height="50"/>
+  <img src="https://skillicons.dev/icons?i=css" title="CSS - Styling & layout" height="50"/>
+  <img src="https://skillicons.dev/icons?i=html" title="HTML - UI Structure" height="50"/>
+</p>>
 
 ---
 
