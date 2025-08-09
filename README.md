@@ -77,12 +77,21 @@ AnomVisor/
 | **HTML**               | UI structure |
 
 <p align="center">
-  <img src="https://skillicons.dev/icons?i=python" title="Python - Backend ML processing (Flask/FastAPI)" height="50"/>
-  <img src="https://raw.githubusercontent.com/github/explore/main/topics/jupyter-notebook/jupyter-notebook.png" title="Jupyter Notebook - Model prototyping & experiments" height="50"/>
-  <img src="https://skillicons.dev/icons?i=javascript" title="JavaScript (React) - Interactive UI" height="50"/>
-  <img src="https://skillicons.dev/icons?i=css" title="CSS - Styling & layout" height="50"/>
-  <img src="https://skillicons.dev/icons?i=html" title="HTML - UI Structure" height="50"/>
-</p>>
+  <img src="https://skillicons.dev/icons?i=css" title="CSS - 28.1%" height="50"/>
+  <b>28.1%</b>
+  &nbsp;&nbsp;
+  <img src="https://skillicons.dev/icons?i=python" title="Python - 24.2%" height="50"/>
+  <b>24.2%</b>
+  &nbsp;&nbsp;
+  <img src="https://raw.githubusercontent.com/github/explore/main/topics/jupyter-notebook/jupyter-notebook.png" title="Jupyter Notebook - 24.0%" height="50"/>
+  <b>24.0%</b>
+  &nbsp;&nbsp;
+  <img src="https://skillicons.dev/icons?i=javascript" title="JavaScript - 23.4%" height="50"/>
+  <b>23.4%</b>
+  &nbsp;&nbsp;
+  <img src="https://skillicons.dev/icons?i=html" title="HTML - 0.3%" height="50"/>
+  <b>0.3%</b>
+</p>
 
 ---
 
@@ -109,7 +118,7 @@ npm start
 ```
 ---
 ## ▶️ Usage
-### 1.Open the UI in your browser.
-### 2.Upload a .mat dataset (e.g., Indian Pines, Pavia University).
-### 3.Start processing → Real-time progress bar & visual feedback.
-### 4.View results → Anomaly map + classification results.
+#### 1.Open the UI in your browser.
+#### 2.Upload a .mat dataset (e.g., Indian Pines, Pavia University).
+#### 3.Start processing → Real-time progress bar & visual feedback.
+#### 4.View results → Anomaly map + classification results.
