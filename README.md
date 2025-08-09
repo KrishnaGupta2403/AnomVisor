@@ -43,3 +43,29 @@ Here’s what powers **AnomVisor**:
 ---
 
 ## 📂 Project Structure
+```plaintext
+AnomVisor/
+│── backend/                  # Python backend for ML processing
+│   ├── app.py                 # Flask/FastAPI server
+│   ├── train_ae_transformer.py# Autoencoder + Transformer training
+│   ├── utils.py               # Utility functions
+│   ├── requirements.txt       # Python dependencies
+│
+│── hyperspectral-app/         # React frontend
+│   ├── public/                # Public assets
+│   ├── src/                   # React components
+│   │   ├── components/        # UI Components
+│   │   ├── App.js             # Main app entry
+│   │   ├── App.css            # Styles
+│   ├── package.json           # Frontend dependencies
+│
+│── uploads/                   # Uploaded datasets
+│   ├── Indian_pines_corrected.mat
+│   
+│── AE_Transformer_SVM.ipynb   # Model notebook
+│── technical_approach_plan.txt
+│── technical_approach_explanation.txt
+│── README.md
+
+
+
