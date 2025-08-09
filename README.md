@@ -1,44 +1,39 @@
-<!-- Animated Title -->
+<!-- Project Title Animation -->
 <p align="center">
-  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=900&size=32&pause=1000&color=5B7FE4&center=true&vCenter=true&width=900&lines=AnomVisor;Hyperspectral+Image+Anomaly+Detection;Autoencoder+%2B+Transformer+%2B+SVM;AI+%7C+ML+%7C+Computer+Vision" alt="Typing SVG" />
-</p>
-
-<!-- Project Logo -->
-<p align="center">
-  <img src="https://img.icons8.com/external-flat-juicy-fish/344/external-ai-artificial-intelligence-flat-flat-juicy-fish.png" width="120" alt="AnomVisor Logo"/>
+  <img src="https://readme-typing-svg.demolab.com?font=Fira+Code&weight=900&size=32&pause=1000&color=2E8B57&center=true&vCenter=true&width=1000&lines=AnomVisor;Hyperspectral+Image+Anomaly+Detection;Autoencoder+%2B+Transformer+%2B+SVM" alt="Typing SVG" />
 </p>
 
 ---
 
-## 🚀 About AnomVisor
-**AnomVisor** is an advanced **Hyperspectral Image (HSI) anomaly detection & classification system** that leverages  
-**Autoencoder + Transformer + SVM** for accurate detection (>90%) with optimized processing speed.
+# 🌌 AnomVisor — Hyperspectral Image Anomaly Detection & Classification
 
-The project features:
-- 📊 **Accurate detection** of anomalies in hyperspectral datasets.
-- ⚡ **Optimized processing** with PCA, patch batching, and Transformer-based scoring.
-- 🎯 **Classification** of anomaly types using SVM.
-- 🖥️ **Interactive UI** with dynamic visualizations while detection runs.
+**AnomVisor** is an intelligent anomaly detection system designed for **Hyperspectral Image (HSI)** analysis.  
+It combines **deep learning (Autoencoder)** with **sequence modeling (Transformer)** and **machine learning (SVM)** to detect and classify spectral anomalies with **>90% accuracy**.
 
 ---
 
-## 🛠️ Tech Stack
-Here’s what powers **AnomVisor**:
+## 📖 Domain Overview
 
-| Language / Tool | Percentage |
-|-----------------|------------|
-| ![CSS](https://img.shields.io/badge/CSS3-1572B6?style=for-the-badge&logo=css3&logoColor=white) | 28.1% |
-| ![Python](https://img.shields.io/badge/Python-3776AB?style=for-the-badge&logo=python&logoColor=white) | 24.2% |
-| ![Jupyter](https://img.shields.io/badge/Jupyter%20Notebook-F37626?style=for-the-badge&logo=jupyter&logoColor=white) | 24.0% |
-| ![JavaScript](https://img.shields.io/badge/JavaScript-F7DF1E?style=for-the-badge&logo=javascript&logoColor=black) | 23.4% |
-| ![HTML](https://img.shields.io/badge/HTML5-E34F26?style=for-the-badge&logo=html5&logoColor=white) | 0.3% |
+### 🌍 What is Hyperspectral Imaging?
+Hyperspectral Imaging (HSI) captures images across **hundreds of spectral bands**, far beyond the RGB range.  
+It allows us to detect **material properties, chemical compositions, and subtle anomalies** that are invisible to the human eye.
+
+**Applications include:**
+- 🚜 **Agriculture** → Crop health monitoring, disease detection.
+- 🏭 **Industry** → Quality control, contamination detection.
 
 ---
 
-## 📷 Language Distribution
-<p align="center">
-  <img src="https://github-readme-stats.vercel.app/api/top-langs/?username=KrishnaGupta2403&layout=compact&theme=tokyonight" alt="Top Languages" />
-</p>
+## 🧠 How AnomVisor Works
+
+**Workflow Pipeline:**
+1. **Data Acquisition** → Upload `.mat` hyperspectral datasets.
+2. **Preprocessing** → PCA dimensionality reduction & patch extraction.
+3. **Feature Learning** → Autoencoder learns compact spectral representations.
+4. **Sequence Modeling** → Transformer captures contextual relationships.
+5. **Anomaly Scoring** → Reconstruction error + Transformer attention.
+6. **Classification** → SVM predicts the anomaly class.
+7. **Visualization** → Heatmaps & classification labels displayed in the UI.
 
 ---
 
@@ -61,11 +56,56 @@ AnomVisor/
 │
 │── uploads/                   # Uploaded datasets
 │   ├── Indian_pines_corrected.mat
-│   
+│
 │── AE_Transformer_SVM.ipynb   # Model notebook
 │── technical_approach_plan.txt
 │── technical_approach_explanation.txt
 │── README.md
 
 
+```
+---
 
+ ## 🛠️ Technology Stack
+
+| Language / Tool        | Role |
+|------------------------|------|
+| **Python**             | Backend ML processing (Flask/FastAPI) |
+| **Jupyter Notebook**   | Model prototyping & experiments |
+| **JavaScript (React)** | Interactive UI |
+| **CSS**                | Styling & layout |
+| **HTML**               | UI structure |
+
+<p align="center">
+  <img src="./assets/languages.png" alt="Language Distribution" width="600"/>
+</p>
+
+---
+
+## 📦 Installation Guide
+
+### 1️⃣ Clone the Repository
+```bash
+git clone https://github.com/YOUR_GITHUB_USERNAME/AnomVisor.git
+cd AnomVisor
+```
+
+### 2️⃣ Backend Setup (Python)
+```bash
+
+cd backend
+pip install -r requirements.txt
+python app.py
+```
+### 3️⃣ Frontend Setup (React)
+```bash
+cd ../hyperspectral-app
+npm install
+npm start
+```
+---
+## ▶️ Usage
+### 1.Open the UI in your browser.
+### 2.Upload a .mat dataset (e.g., Indian Pines, Pavia University).
+### 3.Start processing → Real-time progress bar & visual feedback.
+### 4.View results → Anomaly map + classification results.
